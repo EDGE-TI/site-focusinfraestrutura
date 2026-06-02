@@ -241,27 +241,27 @@
     line-height: 1.7;
 }
 
-/* --- Estilização do Lado Direito (Carrossel) --- */
+/* Garanta que o container do primeiro carrossel tenha essas propriedades intactas */
 .features-carousel {
     flex: 1;
     position: relative;
     width: 100%;
     max-width: 550px;
     height: 380px;
-    overflow: hidden;
+    overflow: hidden; /* Se isso sumiu, as imagens vazam ou não movem */
     border-radius: 16px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 .carousel-slider {
     display: flex;
-    width: 300%; /* 100% para cada uma das 3 imagens */
+    width: 300%; /* IMPORTANTE: Precisa ser 300% para as 3 imagens ficarem lado a lado */
     height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
-    width: 33.333%;
+    width: 33.333%; /* IMPORTANTE: Cada imagem ocupa exatamente 1/3 do slider */
     height: 100%;
 }
 
@@ -1482,50 +1482,43 @@
 <script>
     // --- Lógica das Abas de Texto ---
     function switchTab(event, tabId) {
-        // Remove a classe ativa de todos os botões
         const buttons = document.querySelectorAll('.tab-btn');
         buttons.forEach(btn => btn.classList.remove('active'));
         
-        // Remove a classe ativa de todos os conteúdos
         const contents = document.querySelectorAll('.tab-content');
         contents.forEach(content => content.classList.remove('active'));
         
-        // Adiciona a classe ativa no botão clicado e no respectivo conteúdo
         event.currentTarget.classList.add('active');
         document.getElementById(tabId).classList.add('active');
     }
 
-    // --- Lógica do Carrossel de Imagens ---
+    // --- 1. LÓGICA DO PRIMEIRO CARROSSEL (Seção Soluções) ---
     let currentSlide = 0;
-    const totalSlides = 3; // Quantidade de imagens que colocamos
+    const totalSlides = 3; 
 
     function updateCarousel() {
         const slider = document.getElementById('carouselSlider');
-        const dots = document.querySelectorAll('.dot');
+        const dots = document.querySelectorAll('.features-carousel .dot'); 
         
-        // Move o slider horizontalmente baseado no slide atual
-        slider.style.transform = `translateX(-${currentSlide * 33.333}%)`;
+        if (slider) {
+            slider.style.transform = `translateX(-${currentSlide * 33.333}%)`;
+        }
         
-        // Atualiza os pontinhos indicadores
-        dots.forEach((dot, index) => {
-            if (index === currentSlide) {
-                dot.classList.add('active');
-            } else {
-                dot.classList.remove('active');
-            }
-        });
+        if (dots.length > 0) {
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
     }
 
     function moveCarousel(direction) {
         currentSlide += direction;
-        
-        // Faz o carrossel ser infinito (volta pro começo ou vai pro fim)
-        if (currentSlide >= totalSlides) {
-            currentSlide = 0;
-        } else if (currentSlide < 0) {
-            currentSlide = totalSlides - 1;
-        }
-        
+        if (currentSlide >= totalSlides) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = totalSlides - 1;
         updateCarousel();
     }
 
@@ -1533,62 +1526,70 @@
         currentSlide = index;
         updateCarousel();
     }
-    // --- Lógica de Carrossel Infinito (Sem espaços brancos) ---
-const track = document.getElementById('portfolioTrack');
-const prevBtn = document.getElementById('prevCardBtn');
-const nextBtn = document.getElementById('nextCardBtn');
-const originalCards = Array.from(track.children);
 
-// Só ativa o loop inteligente em telas maiores (Desktop/Tablet)
-if (window.innerWidth > 768) {
-    const cardWidth = 380; // Correspondente ao CSS
-    const gap = 30;
-    const step = cardWidth + gap;
 
-    // Clonar os itens necessários para frente e para trás para mascarar o fundo
-    originalCards.forEach(card => {
-        const cloneBefore = card.cloneNode(true);
-        const cloneAfter = card.cloneNode(true);
-        track.appendChild(cloneAfter);
-        track.insertBefore(cloneBefore, track.firstChild);
-    });
+    // --- 2. LÓGICA DO SEGUNDO CARROSSEL (Portfólio / Loop Infinito) ---
+    // Executa apenas após o carregamento completo do DOM para evitar travar o resto do site
+    document.addEventListener("DOMContentLoaded", () => {
+        const track = document.getElementById('portfolioTrack');
+        const prevBtn = document.getElementById('prevCardBtn');
+        const nextBtn = document.getElementById('nextCardBtn');
+        
+        // Verifica se os elementos do segundo carrossel existem na página antes de rodar
+        if (!track || !prevBtn || !nextBtn) return;
 
-    // Posição inicial: deslocado exatamente o tamanho do bloco original clonado para a esquerda
-    let currentIndex = originalCards.length;
-    let isTransitioning = false;
+        const originalCards = Array.from(track.children);
+        const gap = 30;
 
-    // Alinhamento inicial instantâneo
-    track.style.transition = 'none';
-    track.style.transform = `translateX(-${currentIndex * step}px)`;
+        // Clona os itens necessários para o loop infinito
+        originalCards.forEach(card => {
+            const cloneBefore = card.cloneNode(true);
+            const cloneAfter = card.cloneNode(true);
+            track.appendChild(cloneAfter);
+            track.insertBefore(cloneBefore, track.firstChild);
+        });
 
-    function moveCarousel(direction) {
-        if (isTransitioning) return;
-        isTransitioning = true;
+        let currentIndex = originalCards.length;
+        let isTransitioning = false;
 
-        track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
-        currentIndex += direction;
-        track.style.transform = `translateX(-${currentIndex * step}px)`;
+        function getStepWidth() {
+            const firstCard = track.querySelector('.portfolio-card');
+            return firstCard ? firstCard.getBoundingClientRect().width + gap : 410;
+        }
 
-        // Checa se alcançou os clones das extremidades para resetar sem o usuário ver
-        track.addEventListener('transitionend', () => {
-            track.style.transition = 'none';
-            
-            if (currentIndex >= originalCards.length * 2) {
-                // Se foi muito para a direita, teleporta de volta para o miolo correspondente
-                currentIndex = originalCards.length;
-            } else if (currentIndex < originalCards.length) {
-                // Se foi muito para a esquerda, teleporta para o miolo correspondente
-                currentIndex = originalCards.length * 2 - 1;
-            }
-            
+        // Posicionamento inicial síncrono
+        track.style.transition = 'none';
+        track.style.transform = `translateX(-${currentIndex * getStepWidth()}px)`;
+
+        function movePortfolio(direction) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            const step = getStepWidth();
+            track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+            currentIndex += direction;
             track.style.transform = `translateX(-${currentIndex * step}px)`;
-            isTransitioning = false;
-        }, { once: true });
-    }
 
-    nextBtn.addEventListener('click', () => moveCarousel(1));
-    prevBtn.addEventListener('click', () => moveCarousel(-1));
-}
+            track.addEventListener('transitionend', () => {
+                track.style.transition = 'none';
+                if (currentIndex >= originalCards.length * 2) {
+                    currentIndex = originalCards.length;
+                } else if (currentIndex < originalCards.length) {
+                    currentIndex = originalCards.length * 2 - 1;
+                }
+                track.style.transform = `translateX(-${currentIndex * getStepWidth()}px)`;
+                isTransitioning = false;
+            }, { once: true });
+        }
+
+        nextBtn.addEventListener('click', () => movePortfolio(1));
+        prevBtn.addEventListener('click', () => movePortfolio(-1));
+
+        window.addEventListener('resize', () => {
+            track.style.transition = 'none';
+            track.style.transform = `translateX(-${currentIndex * getStepWidth()}px)`;
+        });
+    });
 </script>
 </body>
 </html>

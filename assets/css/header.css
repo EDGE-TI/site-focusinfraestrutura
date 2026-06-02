@@ -42,17 +42,39 @@
     flex: 2; /* Dá mais espaço para o menu centralizado */
 }
 
+/* --- Ajuste de Cores para Header com Fundo Vermelho Escuro --- */
 .menu-item a {
     text-decoration: none;
-    color: #ffffff;
+    color: #f1f5f9; /* Texto padrão em Off-White (excelente contraste no vermelho) */
     font-weight: 500;
     font-size: 16px;
+    white-space: nowrap;
+    position: relative;
+    padding: 8px 0;
     transition: color 0.3s ease;
-    white-space: nowrap; /* Evita que o texto quebre em duas linhas */
 }
 
+/* Mudança da cor do texto no Hover para Dourado Champagne */
 .menu-item a:hover {
-    color: #ffffff;
+    color: #ff9a9a; /* Tom dourado elegante que combina perfeitamente com vermelho escuro */
+}
+
+/* Criação da linha embaixo do texto */
+.menu-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Linha também em Dourado Champagne */
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), left 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Expansão da linha no Hover */
+.menu-item a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 /* Oculta as redes sociais dentro do menu no modo Desktop */
