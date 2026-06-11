@@ -1,11 +1,12 @@
 module.exports = function(eleventyConfig) {
-    // Copia a pasta assets original direto para a pasta final (_site/assets)
-    eleventyConfig.addPassthroughCopy("assets");
-    // Se você tiver uma pasta para imagens separada fora de assets (ex: img/), copie também:
-    // eleventyConfig.addPassthroughCopy("img");
+  // Garante que o CSS, JS e imagens sejam movidos
+  eleventyConfig.addPassthroughCopy("assets");
 
-    // Ajusta o Eleventy para entender o subcaminho do GitHub Pages
-    return {
-        pathPrefix: "/site-focusinfraestrutura/"
-    };
+  return {
+    pathPrefix: "/site-focusinfraestrutura/",
+    dir: {
+      input: ".",        // Lê os arquivos HTML da raiz do repositório
+      output: "_site"    // Cospe o resultado na pasta _site
+    }
+  };
 };
