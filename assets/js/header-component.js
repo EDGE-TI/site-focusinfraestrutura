@@ -20,10 +20,10 @@ class CustomHeader extends HTMLElement {
 
                 <ul class="menu">
                     <li class="menu-item"><a href="${base}/">Home</a></li>
-                    <li class="menu-item"><a href="${base}/#quem-somos">Quem Somos</a></li>
+                    <li class="menu-item"><a href="${base}/quem-somos">Quem Somos</a></li>
                     <li class="menu-item"><a href="${base}/servicos/">Serviços</a></li>
                     <li class="menu-item"><a href="${base}/noticias/">Notícias</a></li>
-                    <li class="menu-item"><a href="${base}/#contato">Contato</a></li>
+                    <li class="menu-item"><a href="${base}/contato">Contato</a></li>
                     <li class="menu-item mobile-socials-item">
                         <div class="mobile-socials">
                             <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
