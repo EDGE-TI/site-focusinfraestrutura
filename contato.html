@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Focus Infraestrutura</title>
+    
+    <link rel="stylesheet" href="/site-focusinfraestrutura/assets/css/header.css">
+    <link rel="stylesheet" href="/site-focusinfraestrutura/assets/css/footer.css">
+    
+    <script src="/site-focusinfraestrutura/assets/js/header-component.js" defer></script>
+    
+    <style>
+        /* --- Configurações Globais --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            padding-top: 80px; /* Espaço para o header fixo */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Banner de Entrada --- */
+        .contact-banner {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(64, 0, 15, 0.95)), 
+                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact-banner h1 {
+            font-size: 42px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .contact-banner p {
+            font-size: 18px;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* --- Seção Centralizada de Contato --- */
+        .contact-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 580px; /* Largura perfeita para leitura centralizada */
+            border-radius: 16px;
+            padding: 45px 35px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+            border: 1px solid #e2e8f0;
+            text-align: center; /* Garante a centralização de todos os textos */
+        }
+
+        /* Blocos de Informação */
+        .contact-block {
+            margin-bottom: 35px;
+        }
+
+        .contact-block h2 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #800020; /* Nosso Vermelho Escuro */
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .contact-block p, .contact-block a {
+            font-size: 18px;
+            color: #334155;
+            line-height: 1.6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-block a:hover {
+            color: #ba183d;
+        }
+
+        /* Divisor interno sutil */
+        .contact-divider {
+            height: 1px;
+            background-color: #e2e8f0;
+            width: 60%;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Redes Sociais Centralizadas */
+        .contact-socials-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        .contact-socials-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Links das Redes em Formato de Círculo */
+        .social-circle {
+            width: 45px;
+            height: 45px;
+            background-color: #f1f5f9;
+            color: #800020;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-circle svg {
+            width: 20 height: 20;
+            fill: currentColor;
+        }
+
+        .social-circle:hover {
+            background-color: #800020;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(128, 0, 32, 0.2);
+        }
+
+        /* --- Responsividade --- */
+        @media (max-width: 480px) {
+            .contact-banner h1 { font-size: 32px; }
+            .contact-banner p { font-size: 15px; }
+            .contact-card { padding: 35px 20px; }
+            .contact-block p, .contact-block a { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <custom-header></custom-header>
+
+    <section class="contact-banner">
+        <h1>Contato</h1>
+        <p>Entre em contato conosco para planejar, estruturar e executar o seu projeto de infraestrutura.</p>
+    </section>
+
+    <main class="contact-container">
+        <div class="contact-card">
+            
+            <div class="contact-block">
+                <h2>Telefone</h2>
+                <p><a href="tel:63992245975">(63) 99224-5975</a></p>
+            </div>
+
+            <div class="contact-divider"></div>
+
+            <div class="contact-block">
+                <h2>E-mail</h2>
+                <p><a href="mailto:contato@focusinfraestrutura.com.br">contato@focusinfraestrutura.com.br</a></p>
+            </div>
+
+            <div class="contact-divider"></div>
+
+            <div class="contact-block">
+                <h2>Localização</h2>
+                <p>
+                    Rua das Andirobas, Quadra 43, Casa 17<br>
+                    Bairro Renascença — São Luís - MA<br>
+                    CEP: 65075-040
+                </p>
+            </div>
+
+            <div class="contact-divider"></div>
+
+            <div class="contact-socials-title">Conecte-se Conosco</div>
+            <div class="contact-socials-row">
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-circle" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-circle" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column branding-col">
+                <div class="footer-logo">Focus <span>Infraestrutura</span></div>
+                <p class="footer-about">Soluções sólidas e inovadoras em engenharia e infraestrutura em todo o território nacional. Projetando e construindo o futuro de grandes negócios.</p>
+                <div class="footer-socials">
+                    <a href="#">FB</a>
+                    <a href="#">IG</a>
+                    <a href="#">LK</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Navegação</h3>
+                <ul class="footer-links">
+                    <li><a href="/site-focusinfraestrutura/">Home</a></li>
+                    <li><a href="/site-focusinfraestrutura/#quem-somos">Quem Somos</a></li>
+                    <li><a href="/site-focusinfraestrutura/servicos/">Serviços</a></li>
+                    <li><a href="/site-focusinfraestrutura/noticias/">Notícias</a></li>
+                    <li><a href="/site-focusinfraestrutura/#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Canais de Contato</h3>
+                <ul class="footer-contact-info">
+                    <li><strong>Telefone:</strong> <a href="tel:63992245975">(63) 99224-5975</a></li>
+                    <li><strong>E-mail:</strong> <a href="mailto:contato@focusinfraestrutura.com.br">contato@focusinfraestrutura.com.br</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Onde Estamos</h3>
+                <p class="footer-address">Rua das Andirobas, Quadra 43, Casa 17<br>Bairro Renascença<br>São Luís - MA | CEP: 65075-040</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Focus Infraestrutura. Todos os direitos reservados.</p>
+                <p class="developer-credit">Desenvolvido por <span>Edge TI</span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
