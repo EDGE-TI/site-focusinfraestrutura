@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias e Novidades - Focus Infraestrutura</title>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    
+    <style>
+        /* --- Configurações Globais da Página --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            padding-top: 80px; /* Evita que o header fixo cubra o topo */
+        }
+
+        /* Banner Superior */
+        .blog-banner {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(64, 0, 15, 0.95)), 
+                        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .blog-banner h1 {
+            font-size: 42px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .blog-banner p {
+            font-size: 18px;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Seção da Grade de Artigos */
+        .blog-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+            gap: 35px;
+        }
+
+        /* Card de Notícia Individual */
+        .blog-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Caixa de Imagem do Card */
+        .blog-card-img {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        /* Conteúdo do Texto do Card */
+        .blog-card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Meta dados (Data de publicação) */
+        .blog-card-meta {
+            font-size: 13px;
+            color: #800020; /* Nosso Vermelho Escuro */
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-card-content h2 {
+            font-size: 20px;
+            color: #0f172a;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .blog-card-content p {
+            font-size: 15px;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1; /* Força o link a alinhar sempre na base */
+        }
+
+        /* Link/Botão de ler mais */
+        .blog-card-link {
+            color: #800020; /* Vermelho Escuro */
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s ease;
+            margin-top: auto;
+        }
+
+        /* Efeitos Hover */
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(128, 0, 32, 0.06);
+            border-color: rgba(128, 0, 32, 0.15);
+        }
+
+        .blog-card:hover .blog-card-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-card:hover .blog-card-link {
+            color: #ba183d;
+        }
+
+        /* --- Responsividade --- */
+        @media (max-width: 968px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .blog-grid {
+                grid-template-columns: 1fr; /* 1 coluna no celular */
+            }
+            .blog-banner h1 {
+                font-size: 32px;
+            }
+            .blog-section {
+                padding: 50px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo"><a href="index.html" style="color:#fff; text-decoration:none;">Focus <span style="color:#981f33;">Infraestrutura</span></a></div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger-label">
+                <span style="background-color: #fff;"></span>
+                <span style="background-color: #fff;"></span>
+                <span style="background-color: #fff;"></span>
+            </label>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="quem-somos.html">Quem Somos</a></li>
+                <li class="menu-item"><a href="servicos.html">Serviços</a></li>
+                <li class="menu-item"><a href="noticias.html" class="active">Notícias</a></li>
+                <li class="menu-item"><a href="index.html#contato">Contato</a></li>
+                <li class="menu-item mobile-socials-item">
+                    <div class="mobile-socials">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">LK</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="header-socials">
+                <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z"/></svg></a>
+                <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="blog-banner">
+        <h1>Notícias</h1>
+        <p>Acompanhe as últimas novidades, inovações e artigos técnicos da Focus Infraestrutura.</p>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-grid">
+            
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Tecnologia em Obras">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">11 de Junho de 2026</div>
+                    <h2>Inovação na Pavimentação Asfáltica Industrial</h2>
+                    <p>Conheça as novas tecnologias que a Focus está aplicando para aumentar a durabilidade de vias expressas e pátios logísticos de alta carga.</p>
+                    <a href="#" class="blog-card-link">Leia o Artigo &rarr;</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Planejamento de Projetos">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">05 de Junho de 2026</div>
+                    <h2>A Importância da Terraplanagem Investigativa</h2>
+                    <p>Como a análise computadorizada de solo antes da movimentação de terra reduz em até 15% os custos inesperados de fundação civil.</p>
+                    <a href="#" class="blog-card-link">Leia o Artigo &rarr;</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=600&q=80" alt="Ecoeficiência na Construção">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">28 de Maio de 2026</div>
+                    <h2>Sustentabilidade e Ecoeficiência em Grandes Obras</h2>
+                    <p>Práticas modernas de reaproveitamento de agregados que a Focus adota para diminuir a pegada de carbono sem perder a rigidez estrutural.</p>
+                    <a href="#" class="blog-card-link">Leia o Artigo &rarr;</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column branding-col">
+                <div class="footer-logo">Focus <span>Infraestrutura</span></div>
+                <p class="footer-about">Soluções sólidas e inovadoras em engenharia e infraestrutura em todo o território nacional. Projetando e construindo o futuro de grandes negócios.</p>
+                <div class="footer-socials">
+                    <a href="#">FB</a>
+                    <a href="#">IG</a>
+                    <a href="#">LK</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Navegação</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Canais de Contato</h3>
+                <ul class="footer-contact-info">
+                    <li><strong>Telefone:</strong> <a href="tel:63992245975">(63) 99224-5975</a></li>
+                    <li><strong>E-mail:</strong> <a href="mailto:contato@focusinfraestrutura.com.br">contato@focusinfraestrutura.com.br</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Onde Estamos</h3>
+                <p class="footer-address">Rua das Andirobas, Quadra 43, Casa 17<br>Bairro Renascença<br>São Luís - MA | CEP: 65075-040</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Focus Infraestrutura. Todos os direitos reservados.</p>
+                <p class="developer-credit">Desenvolvido por <span>Edge TI</span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
