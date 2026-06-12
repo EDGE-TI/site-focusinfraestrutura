@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Focus Infraestrutura</title>
+    
+    <link rel="stylesheet" href="/site-focusinfraestrutura/assets/css/header.css">
+    <link rel="stylesheet" href="/site-focusinfraestrutura/assets/css/footer.css">
+    
+    <script src="/site-focusinfraestrutura/assets/js/header-component.js" defer></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Estilização do Artigo --- */
+        .post-container {
+            flex: 1;
+            max-width: 800px; /* Largura ideal e confortável para leitura de textos */
+            margin: 0 auto;
+            padding: 60px 20px;
+            width: 100%;
+        }
+
+        .post-header {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+
+        .post-meta {
+            font-size: 14px;
+            color: #800020; /* Vermelho Escuro */
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .post-header h1 {
+            font-size: 36px;
+            color: #0f172a;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        /* Estilização interna do conteúdo digitado no Markdown */
+        .post-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #334155;
+        }
+
+        .post-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .post-content h2, .post-content h3 {
+            color: #0f172a;
+            margin: 40px 0 20px 0;
+            font-weight: 700;
+        }
+
+        .post-content h2 { font-size: 26px; }
+        .post-content h3 { font-size: 22px; }
+
+        /* Estilização para as listas que você usar nos artigos */
+        .post-content ul, .post-content ol {
+            margin-bottom: 25px;
+            padding-left: 25px;
+        }
+
+        .post-content li {
+            margin-bottom: 10px;
+        }
+
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 40px;
+            color: #800020;
+            text-decoration: none;
+            font-weight: 700;
+            gap: 8px;
+        }
+
+        .btn-voltar:hover {
+            color: #ba183d;
+        }
+
+        @media (max-width: 640px) {
+            .post-header h1 { font-size: 28px; }
+            .post-content { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <custom-header></custom-header>
+
+    <main class="post-container">
+        <article>
+            <header class="post-header">
+                <div class="post-meta">Publicado em {{ date | date: "%d/%m/%Y" }}</div>
+                <h1>{{ title }}</h1>
+            </header>
+            
+            <div class="post-content">
+                {{ content }}
+            </div>
+            
+            <a href="/site-focusinfraestrutura/noticias/" class="btn-voltar">&larr; Voltar para Notícias</a>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column branding-col">
+                <div class="footer-logo">Focus <span>Infraestrutura</span></div>
+                <p class="footer-about">Soluções sólidas e inovadoras em engenharia e infraestrutura em todo o território nacional.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Navegação</h3>
+                <ul class="footer-links">
+                    <li><a href="/site-focusinfraestrutura/">Home</a></li>
+                    <li><a href="/site-focusinfraestrutura/servicos/">Serviços</a></li>
+                    <li><a href="/site-focusinfraestrutura/noticias/">Notícias</a></li>
+                    <li><a href="/site-focusinfraestrutura/contato/">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Focus Infraestrutura. Todos os direitos reservados.</p>
+                <p class="developer-credit">Desenvolvido por <span>Edge TI</span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
