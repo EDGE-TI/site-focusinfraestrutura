@@ -5,7 +5,7 @@ description: "Como a análise tridimensional de solo reduz custos inesperados em
 layout: layout-post.html
 tags: blog
 ---
-
+![Imagem de uma fundação vista de cima](/site-focusinfraestrutura/assets/images/post-blog-image/testeblogfocus.webp)
 A engenharia moderna exige precisão milimétrica antes mesmo da primeira escavadeira entrar em campo. Na Focus Infraestrutura, a implementação de sistemas de topografia tridimensional e sensores automatizados em maquinários pesados revolucionou nossos processos.
 
 ## Por que a análise 3D evita prejuízos?
