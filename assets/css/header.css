@@ -221,6 +221,12 @@
     text-decoration: none;
     transition: all 0.3s ease;
 }
+/* Faz o SVG se comportar exatamente como o ícone de fonte do seu modelo */
+.whatsapp-float svg {
+    width: 1em;
+    height: 1em;
+    display: block;
+}
 
 /* Força o alinhamento correto do ícone do Phosphor dentro do flex */
 .whatsapp-float i {
