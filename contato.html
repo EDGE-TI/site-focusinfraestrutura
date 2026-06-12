@@ -138,7 +138,8 @@
         }
 
         .social-circle svg {
-            width: 20 height: 20;
+            width: 20 ;
+            height: 20;
             fill: currentColor;
         }
 
@@ -156,6 +157,57 @@
             .contact-card { padding: 35px 20px; }
             .contact-block p, .contact-block a { font-size: 16px; }
         }
+        /* --- Seção da Faixa do Mapa --- */
+.map-section {
+    background-color: #f1f5f9; /* Faixa com fundo cinza sutil */
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 60px 0; /* Espaçamento vertical da faixa */
+    width: 100%;
+}
+
+.map-container {
+    max-width: 1140px; /* Alinhado com a largura padrão do container do footer */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.map-section h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0f172a;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* Container que mantém a proporção do mapa e impede quebras em telas pequenas */
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Altura ideal para desktop */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+    border: 1px solid #cbd5e1;
+}
+
+.map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Ajuste de altura para celulares */
+@media (max-width: 768px) {
+    .map-section { padding: 40px 0; }
+    .map-wrapper { height: 320px; }
+    .map-section h3 { font-size: 20px; margin-bottom: 20px; }
+}
     </style>
 </head>
 <body>
@@ -209,8 +261,19 @@
             </div>
 
         </div>
-    </main>
+        <!-- Seção do Google Maps -->
 
+    </main>
+<section class="map-section">
+    <div class="map-container">
+        <h3>Nossa Localização</h3>
+        
+        <div class="map-wrapper">
+            <!-- Iframe oficial do Google Maps apontando para o Bairro Renascença -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.0099336815415!2d-44.297705525092205!3d-2.503606897474963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68c2639edf821%3A0xe3a49a5b998dd96f!2sR.%20das%20Andirobas%2C%20S%C3%A3o%20Lu%C3%ADs%20-%20MA%2C%2065075-040!5e0!3m2!1spt-BR!2sbr!4v1781210137269!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column branding-col">
