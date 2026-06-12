@@ -143,7 +143,7 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #831826;
+        background-color: #2a0f0f;
         flex-direction: column;
         gap: 0;
         text-align: center;
@@ -201,7 +201,7 @@
         transform: translateY(-9px) rotate(-45deg);
     }
 }
-/* --- BOTÃO FLUTUANTE WHATSAPP (Copiado & Validado) --- */
+/* --- BOTÃO FLUTUANTE WHATSAPP (Ajustado para SVG) --- */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -211,8 +211,6 @@
     background-color: #25D366; /* Verde oficial do WhatsApp */
     color: #FFF !important; /* Garante o ícone branco */
     border-radius: 50%;
-    text-align: center;
-    font-size: 32px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 9999; /* Garante que fique acima de tudo */
     display: flex;
@@ -221,17 +219,13 @@
     text-decoration: none;
     transition: all 0.3s ease;
 }
-/* Faz o SVG se comportar exatamente como o ícone de fonte do seu modelo */
-.whatsapp-float svg {
-    width: 1em;
-    height: 1em;
-    display: block;
-}
 
-/* Força o alinhamento correto do ícone do Phosphor dentro do flex */
-.whatsapp-float i {
-    display: inline-block;
-    line-height: 1;
+/* 🔥 CORREÇÃO EXATA: Remove o esmagamento e centraliza o SVG perfeitamente */
+.whatsapp-float svg {
+    width: 32px !important;  /* Tamanho exato do ícone do seu modelo */
+    height: 32px !important; /* Tamanho exato do ícone do seu modelo */
+    flex-shrink: 0;          /* Impede o Flexbox de esmagar ou deformar o desenho */
+    display: block;
 }
 
 /* Efeito Hover (Ao passar o mouse) */
@@ -256,7 +250,7 @@
     
     /* Posicionamento */
     position: absolute;
-    right: 70px; /* Fica à esquerda do botão */
+    right: 75px; /* Ajustado para dar um respiro do botão */
     top: 50%;
     transform: translateY(-50%);
     opacity: 0;
@@ -288,7 +282,11 @@
         height: 50px;
         bottom: 20px;
         right: 20px;
-        font-size: 28px;
+    }
+
+    .whatsapp-float svg {
+        width: 26px !important;  /* Proporção reduzida perfeita para o círculo de 50px */
+        height: 26px !important;
     }
     
     /* No celular o tooltip é escondido para não atrapalhar */
