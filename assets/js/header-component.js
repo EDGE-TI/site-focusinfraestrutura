@@ -5,9 +5,9 @@ class CustomHeader extends HTMLElement {
         this.innerHTML = `
         <header class="header">
             <nav class="nav-container">
-                <div class="logo">
-                    <a href="${base}/" style="color: inherit; text-decoration: none;">Focus <span>Infraestrutura</span></a>
-                </div>
+                <a href="${base}/" style="display: flex; align-items: center;">
+                        <img src="${base}assets/images/logo-focus.png" alt="Focus Infraestrutura" class="logo-img">
+                    </a>
                 
                 <input type="checkbox" id="menu-toggle">
                 
