@@ -35,13 +35,11 @@
     height: 100%; /* Garante que o container acompanhe o fluxo */
 }
 
-/* 🔥 CORREÇÃO PARA LOGO QUADRADA: Limita a altura e ajusta o container */
 .logo .logo-img {
-    height: 45px !important;     /* Força a altura ideal para o cabeçalho */
-    width: 45px !important;      /* Sendo 500x500, mantemos largura igual para ficar um quadrado perfeito */
-    max-height: 100%;            /* Impede que passe do limite do bloco */
+    height: 42px !important;     /* Altura ideal para o cabeçalho não esticar */
+    width: auto !important;      /* Libera a largura para se ajustar proporcionalmente ao formato 500x200 */
     display: block;
-    object-fit: contain;         /* Garante que a imagem se encaixe sem cortes */
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
@@ -319,8 +317,7 @@
 /* Ajuste para Celulares (Mobile) */
 @media (max-width: 768px) {
     .logo .logo-img {
-        height: 38px !important; /* Reduz um pouco no mobile para o menu hambúrguer respirar */
-        width: 38px !important;
+        height: 42px !important; /* Reduz um pouco no mobile para o menu hambúrguer respirar */
     }
     .whatsapp-float {
         width: 50px;
