@@ -28,17 +28,26 @@
 
 /* 1. Esquerda: Marca / Logo */
 .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000000;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    flex: 1; /* Faz a logo ocupar seu espaço proporcional na esquerda */
+    flex: 1; 
     text-align: left;
+    display: flex;
+    align-items: center;
+    height: 100%; /* Garante que o container acompanhe o fluxo */
 }
 
-.logo span {
-    color: #ffffff;
+/* 🔥 CORREÇÃO PARA LOGO QUADRADA: Limita a altura e ajusta o container */
+.logo .logo-img {
+    height: 45px !important;     /* Força a altura ideal para o cabeçalho */
+    width: 45px !important;      /* Sendo 500x500, mantemos largura igual para ficar um quadrado perfeito */
+    max-height: 100%;            /* Impede que passe do limite do bloco */
+    display: block;
+    object-fit: contain;         /* Garante que a imagem se encaixe sem cortes */
+    transition: transform 0.3s ease;
+}
+
+/* Leve efeito ao passar o mouse */
+.logo .logo-img:hover {
+    transform: scale(1.05);
 }
 
 /* 2. Centro: Menu Desktop */
@@ -309,6 +318,10 @@
 
 /* Ajuste para Celulares (Mobile) */
 @media (max-width: 768px) {
+    .logo .logo-img {
+        height: 38px !important; /* Reduz um pouco no mobile para o menu hambúrguer respirar */
+        width: 38px !important;
+    }
     .whatsapp-float {
         width: 50px;
         height: 50px;
