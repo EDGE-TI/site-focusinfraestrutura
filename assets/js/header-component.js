@@ -7,7 +7,7 @@ class CustomHeader extends HTMLElement {
             <nav class="nav-container">
                 <div class="logo">
                     <a href="${base}/" style="display: flex; align-items: center;">
-                        <img src="${base}/assets/images/logo-focus.png" alt="Focus Infraestrutura" class="logo-img">
+                        <img src="${base}/site-focusinfraestrutura/assets/images/logo-focus.png" alt="Focus Infraestrutura" class="logo-img">
                     </a>
                 </div>
                 
