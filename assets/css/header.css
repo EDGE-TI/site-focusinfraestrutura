@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     /* Alterado de #2a0f0f para RGBA com 85% de opacidade */
-    background-color: rgba(42, 15, 15, 0.85); 
+    background-color: rgba(42, 15, 15, 0.952); 
     
     /* 🔥 O TRUQUE MODERNO: Cria um efeito de desfoque de vidro profissional no fundo */
     backdrop-filter: blur(10px);
@@ -204,7 +204,7 @@
     .mobile-socials-item {
         display: block;
         padding: 15px;
-        background-color: #831826;
+        background-color: #2a0f0f;
     }
 
     .mobile-socials {
