@@ -1,6 +1,6 @@
 class CustomHeader extends HTMLElement {
     connectedCallback() {
-        const base = "/site-focusinfraestrutura";
+        const base = "";
 
         this.innerHTML = `
         <header class="header">
