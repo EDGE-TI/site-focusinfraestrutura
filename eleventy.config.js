@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
   return {
     pathPrefix: "/",
     dir: {
-      input: "src",        // Lê os arquivos HTML da raiz do repositório
+      input: ".",        // Lê os arquivos HTML da raiz do repositório
       output: "_site"    // Cospe o resultado na pasta _site
     }
   };
