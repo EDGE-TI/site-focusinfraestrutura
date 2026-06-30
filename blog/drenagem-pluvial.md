@@ -8,7 +8,7 @@ tags: blog
 
 Gerenciar o fluxo de águas pluviais é um dos maiores desafios da engenharia de infraestrutura moderna. O aumento das áreas impermeabilizadas em grandes empreendimentos exige sistemas coletores capazes de amortecer picos de cheias e direcionar o volume de forma ambientalmente segura.
 
-![Instalação de tubulação de concreto para drenagem](/site-focusinfraestrutura/assets/img/drenagem.jpg)
+![Instalação de tubulação de concreto para drenagem](/assets/img/drenagem.jpg)
 
 ## Escoamento Superficial e Subsuperficial
 

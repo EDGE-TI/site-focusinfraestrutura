@@ -8,7 +8,7 @@ tags: blog
 
 Movimentar milhares de metros cúbicos de terra requer muito mais do que potência mecânica; exige um plano de rigging e segurança extremamente rígido. A estabilização de taludes e encostas durante a fase de corte é vital para evitar acidentes e perdas materiais.
 
-![Escavadeira hidráulica em corte de talude industrial](/site-focusinfraestrutura/assets/img/terraplanagem-segura.jpg)
+![Escavadeira hidráulica em corte de talude industrial](/assets/img/terraplanagem-segura.jpg)
 
 ## Monitoramento de Encostas e Normas Técnicas
 
