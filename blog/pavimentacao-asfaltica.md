@@ -4,12 +4,12 @@ date: 2026-06-11
 description: "Entenda os fatores determinantes no dimensionamento de pavimentos para pátios logísticos."
 layout: layout-post.html
 tags: blog
-thumb: "/site-focusinfraestrutura/assets/images/post-blog-image/testeblogfocus.webp"
+thumb: "/assets/images/post-blog-image/testeblogfocus.webp"
 ---
 
 A execução de pavimentação asfáltica em ambientes industriais difere drasticamente das vias urbanas convencionais. Pátios de manobra e centros de distribuição exigem um cálculo estrutural refinado para suportar cargas estáticas e dinâmicas contínuas sem sofrer deformações prematuras.
 
-![Maquinário de pavimentação asfáltica em operação](/site-focusinfraestrutura/assets/img/pavimentacao.jpg)
+![Maquinário de pavimentação asfáltica em operação](/assets/img/pavimentacao.jpg)
 
 ## O Fator de Subleito e Compactação
 

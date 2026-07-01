@@ -8,7 +8,7 @@ tags: blog
 
 A sustentabilidade deixou de ser um conceito abstrato para se tornar um requisito de eficiência financeira na engenharia civil pesada. A reutilização de materiais originados de demolições controladas ou fresagens de pavimentos antigos reduz drasticamente o impacto ambiental e o custo de transporte de insumos.
 
-![Pilhas de brita e agregados reciclados em usina](/site-focusinfraestrutura/assets/img/sustentabilidade.jpg)
+![Pilhas de brita e agregados reciclados em usina](/assets/img/sustentabilidade.jpg)
 
 ## O Reaproveitamento do Fresado Asfáltico
 
