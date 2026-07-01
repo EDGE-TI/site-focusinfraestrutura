@@ -1,6 +1,6 @@
 class CustomHeader extends HTMLElement {
     connectedCallback() {
-        const base = "/"; // Base path for the site, adjust if necessary
+        const base = ""; // Base path for the site, adjust if necessary
 
         this.innerHTML = `
         <header class="header">
