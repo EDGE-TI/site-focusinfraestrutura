@@ -28,21 +28,19 @@
 
 /* 1. Esquerda: Marca / Logo */
 .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000000;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    flex: 1; /* Faz a logo ocupar seu espaço proporcional na esquerda */
+    flex: 1; 
     text-align: left;
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    color: #ffffff;
-}
-.logo .logo-img {
-    height: 42px !important;
-    width: auto !important;
+.header img,
+.header .logo-img,
+.logo a img {
+    height: 50px !important;
+    width: auto !important; /* Mantém a proporção exata do novo arquivo 500x200 */
+    display: inline-block !important;
+    object-fit: contain !important;
 }
 /* 2. Centro: Menu Desktop */
 .menu {
@@ -312,6 +310,13 @@
 
 /* Ajuste para Celulares (Mobile) */
 @media (max-width: 768px) {
+    
+    .header img,
+    .header .logo-img,
+    .logo a img {
+        height: 42px !important; /* Reduz ligeiramente para não estocar espaço na tela do celular */
+        max-height: 42px !important;
+
     .whatsapp-float {
         width: 50px;
         height: 50px;
@@ -329,4 +334,5 @@
         display: none;
     }
     
+    }
 }
