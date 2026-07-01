@@ -6,7 +6,7 @@ class CustomHeader extends HTMLElement {
         <header class="header">
             <nav class="nav-container">
                 <a href="${base}/" style="display: flex; align-items: center;">
-                        <img src="${base}assets/images/logo-focus.png" alt="Focus Infraestrutura" class="logo-img">
+                        <img src="${base}/assets/images/logo-focus.png" alt="Focus Infraestrutura" class="logo-img">
                     </a>
                 
                 <input type="checkbox" id="menu-toggle">

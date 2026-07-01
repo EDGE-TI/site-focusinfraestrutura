@@ -40,6 +40,9 @@
 .logo span {
     color: #ffffff;
 }
+.logo .logo-img {
+    height: 42px;     /* Altura ideal para o cabeçalho não esticar */
+    width: auto;      /* Libera a largura para se ajustar proporcionalmente ao formato 500x200 */
 
 /* 2. Centro: Menu Desktop */
 .menu {
@@ -325,4 +328,5 @@
     .whatsapp-float .tooltip-text {
         display: none;
     }
+    
 }
