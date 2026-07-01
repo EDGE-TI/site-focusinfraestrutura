@@ -41,8 +41,8 @@
     color: #ffffff;
 }
 .logo .logo-img {
-    height: 42px;     /* Altura ideal para o cabeçalho não esticar */
-    width: auto;      /* Libera a largura para se ajustar proporcionalmente ao formato 500x200 */
+    height: 42px !important;
+    width: auto !important;
 }
 /* 2. Centro: Menu Desktop */
 .menu {
