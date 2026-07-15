@@ -1,6 +1,5 @@
 module.exports = function(eleventyConfig) {
   // Garante que o CSS, JS e imagens sejam movidos
-  eleventyConfig.addPassthroughCopy("CNAME"); 
   eleventyConfig.addPassthroughCopy("assets");
 
   return {

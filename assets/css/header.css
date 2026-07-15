@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     /* Alterado de #2a0f0f para RGBA com 85% de opacidade */
-    background-color: rgba(42, 15, 15, 0.952); 
+    background-color: rgba(42, 15, 15, 0.85); 
     
     /* 🔥 O TRUQUE MODERNO: Cria um efeito de desfoque de vidro profissional no fundo */
     backdrop-filter: blur(10px);
@@ -32,22 +32,16 @@
     text-align: left;
     display: flex;
     align-items: center;
-    height: 100%; /* Garante que o container acompanhe o fluxo */
 }
 
-.logo .logo-img {
-    height: 42px !important;     /* Altura ideal para o cabeçalho não esticar */
-    width: auto !important;      /* Libera a largura para se ajustar proporcionalmente ao formato 500x200 */
-    display: block;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+.header img,
+.header .logo-img,
+.logo a img {
+    height: 50px !important;
+    width: auto !important; /* Mantém a proporção exata do novo arquivo 500x200 */
+    display: inline-block !important;
+    object-fit: contain !important;
 }
-
-/* Leve efeito ao passar o mouse */
-.logo .logo-img:hover {
-    transform: scale(1.05);
-}
-
 /* 2. Centro: Menu Desktop */
 .menu {
     display: flex;
@@ -204,7 +198,7 @@
     .mobile-socials-item {
         display: block;
         padding: 15px;
-        background-color: #2a0f0f;
+        background-color: #831826;
     }
 
     .mobile-socials {
@@ -316,9 +310,13 @@
 
 /* Ajuste para Celulares (Mobile) */
 @media (max-width: 768px) {
-    .logo .logo-img {
-        height: 42px !important; /* Reduz um pouco no mobile para o menu hambúrguer respirar */
-    }
+    
+    .header img,
+    .header .logo-img,
+    .logo a img {
+        height: 42px !important; /* Reduz ligeiramente para não estocar espaço na tela do celular */
+        max-height: 42px !important;
+
     .whatsapp-float {
         width: 50px;
         height: 50px;
@@ -334,5 +332,7 @@
     /* No celular o tooltip é escondido para não atrapalhar */
     .whatsapp-float .tooltip-text {
         display: none;
+    }
+    
     }
 }

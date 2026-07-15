@@ -1,16 +1,13 @@
 class CustomHeader extends HTMLElement {
     connectedCallback() {
-        const base = "";
+        const base = ""; // Base path for the site, adjust if necessary
 
         this.innerHTML = `
         <header class="header">
             <nav class="nav-container">
-                <div class="logo">
-                    <a href="${base}/" style="display: flex; align-items: center;">
+                <a href="${base}/" style="display: flex; align-items: center;">
                         <img src="${base}/assets/images/logo-focus.png" alt="Focus Infraestrutura" class="logo-img">
                     </a>
-                </div>
-                </div>
                 
                 <input type="checkbox" id="menu-toggle">
                 
@@ -22,10 +19,10 @@ class CustomHeader extends HTMLElement {
 
                 <ul class="menu">
                     <li class="menu-item"><a href="${base}/">Home</a></li>
-                    <li class="menu-item"><a href="${base}/quem-somos">Quem Somos</a></li>
-                    <li class="menu-item"><a href="${base}/servicos/">Serviços</a></li>
-                    <li class="menu-item"><a href="${base}/noticias/">Notícias</a></li>
-                    <li class="menu-item"><a href="${base}/contato">Contato</a></li>
+                    <li class="menu-item"><a href="${base}quem-somos">Quem Somos</a></li>
+                    <li class="menu-item"><a href="${base}servicos">Serviços</a></li>
+                    <li class="menu-item"><a href="${base}noticias">Notícias</a></li>
+                    <li class="menu-item"><a href="${base}contato">Contato</a></li>
                     <li class="menu-item mobile-socials-item">
                         <div class="mobile-socials">
                             <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
