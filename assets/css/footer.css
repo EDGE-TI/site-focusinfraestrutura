@@ -153,7 +153,34 @@
     color: #ffffff;
     font-weight: 600;
 }
+/* --- Alinhamento do Crédito de Desenvolvimento --- */
+.developer-credit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espaço sutil entre o texto "Desenvolvido por:" e a imagem */
+    font-size: 14px;
+    color: #cbd5e1; /* Cinza suave */
+}
 
+/* 🔥 Estilização e tamanho ideal para a logo da Edge TI */
+.edge-logo-link {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.edge-logo-img {
+    height: 18px !important; /* Altura baixinha e super discreta para o rodapé */
+    width: auto !important;  /* Ajusta a largura proporcionalmente à sua logo */
+    display: block;
+    object-fit: contain;
+}
+
+/* Efeitos visuais ao passar o mouse por cima da logo */
+.edge-logo-link:hover {
+    transform: scale(1.05); /* Leve pulsação */
+    opacity: 0.9;
+}
 /* --- Ajuste de Responsividade (Telas menores) --- */
 @media (max-width: 968px) {
     .footer-container {
