@@ -139,6 +139,9 @@
     padding: 25px 0;
     font-size: 14px;
 }
+.footer-logo img{
+    height: 50px;
+}
 
 .footer-bottom-container {
     max-width: 1200px;
