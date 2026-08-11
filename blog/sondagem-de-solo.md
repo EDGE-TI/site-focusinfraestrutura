@@ -9,7 +9,7 @@ thumb: "/assets/images/post-blog-image/sondagem-de-solo.webp"
 
 A fase de movimentação de terra é o ponto de partida crítico de qualquer empreendimento de infraestrutura civil. Negligenciar as características físicas e mecânicas do solo durante a terraplanagem pode resultar em afundamentos, escorregamentos de encostas, trincas em edificações futuras e custos imprevisíveis com retrabalho.
 
-![Escavadeira e frota pesada em operação técnica de terraplanagem](/assets/images/post-blog-image/sondagem-de-solo.webp)
+![Terreno visto de cima](/assets/images/post-blog-image/sondagem-de-solo.webp)
 
 ## 1. Sondagem de Solo e Mapeamento Geotécnico
 

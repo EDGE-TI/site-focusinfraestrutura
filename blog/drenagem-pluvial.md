@@ -1,19 +1,38 @@
 ---
-title: "A Importância da Drenagem Pluvial em Obras Civis"
-date: 2026-05-28
-description: "Como um sistema de drenagem bem projetado previne erosões e garante a segurança jurídica e estrutural de condomínios logísticos."
+title: "Soluções Eficientes de Drenagem Pluvial Urbana e Rodoviária"
+date: 2026-08-11
+description: "Projetos de infraestrutura subterrânea e superficial para contenção de alagamentos, prevenção de erosões e proteção estrutural da malha viária."
 layout: layout-post.html
 tags: blog
+thumb: "/assets/images/drenagem-pluvial.jpg"
 ---
 
-Gerenciar o fluxo de águas pluviais é um dos maiores desafios da engenharia de infraestrutura moderna. O aumento das áreas impermeabilizadas em grandes empreendimentos exige sistemas coletores capazes de amortecer picos de cheias e direcionar o volume de forma ambientalmente segura.
+A drenagem é o sistema de proteção vital de qualquer empreendimento de infraestrutura civil ou malha viária. A água não canalizada ou acumulada de forma inadequada desestabiliza taludes, causa erosão profunda no subleito e compromete criticamente a vida útil dos pavimentos asfálticos e rígidos.
 
-![Instalação de tubulação de concreto para drenagem](/assets/img/drenagem.jpg)
+![Instalação de tubulação e galerias subterrâneas de drenagem pluvial](/assets/images/post-blog-image/drenagem-pluvial.webp)
 
-## Escoamento Superficial e Subsuperficial
+## 1. Drenagem Superficial vs. Drenagem Subterrânea
 
-Um projeto de drenagem eficiente atua em duas frentes: captando a água que corre pelas superfícies asfálticas (através de bueiros e canaletas) e controlando o lençol freático subsuperficial para evitar que o solo abaixo da estrutura fique saturado e perca capacidade de sustentação.
+Um projeto hidráulico de alta eficiência opera em duas frentes complementares: o manejo das águas de precipitação na superfície e a interceptação das águas do lençol freático no subsolo.
 
-### Dispositivos Utilizados:
-* **Bacias de Detenção:** Reservatórios que controlam a velocidade de lançamento na rede pública.
-* **Aduelas de Concreto:** Estruturas modulares para canalizações de grande vazão.
+| Sistema de Drenagem | Dispositivos Principais | Função Técnica e Aplicação |
+| :--- | :--- | :--- |
+| **Drenagem Superficial** | Sarjetas, valetas, bocas de lobo e dissipadores de energia. | Capta o escoamento provocado pelas chuvas na pista e direciona a água para pontos de descarga seguros. |
+| **Drenagem Profunda** | Drenos subterrâneos, tubos perfurados e mantas geotêxteis. | Rebaixa o lençol freático e impede que a água da umidade do solo suba por capilaridade para a base do pavimento. |
+
+---
+
+## 2. Componentes Fundamentais do Sistema Pluvial
+
+Para garantir a vazão adequada e evitar o transbordamento das redes em épocas de chuvas intensas, a infraestrutura pluvial utiliza elementos estratégicos ao longo do canteiro:
+
+* **Bocas de Lobo e Grelhas:** Pontos de captação inicial instalados nos meios-fios das vias para absorver a água da superfície.
+* **Poços de Visita (PVs):** Câmaras verticais instaladas em pontos de mudança de direção ou declividade para permitir inspeção, limpeza e manutenção da rede.
+* **Galerias de Concreto:** Tubulações pré-moldadas de grande diâmetro projetadas para conduzir altos volumes de água até os corpos receptores.
+* **Dissipadores de Energia:** Estruturas de concreto instaladas na saída das tubulações para reduzir a velocidade da água e combater a erosão nos pontos de descarte.
+
+---
+
+## 3. Riscos do Mau Dimensionamento Hidráulico
+
+Subdimensionar a capacidade de vazão da rede de drenagem traz prejuízos severos para o orçamento e a segurança do empreendimento:
