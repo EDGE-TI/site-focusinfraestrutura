@@ -4,6 +4,7 @@ date: 2026-08-11
 description: "Análise profunda sobre mitigação de riscos, ensaios de solo, controle tecnológico de compactação e geotecnia aplicada a grandes obras de infraestrutura."
 layout: layout-post.html
 tags: blog
+image: "/assets/images/post-blog-image/sondagem-de-solo.webp"
 ---
 
 A fase de movimentação de terra é o ponto de partida crítico de qualquer empreendimento de infraestrutura civil. Negligenciar as características físicas e mecânicas do solo durante a terraplanagem pode resultar em afundamentos, escorregamentos de encostas, trincas em edificações futuras e custos imprevisíveis com retrabalho.
